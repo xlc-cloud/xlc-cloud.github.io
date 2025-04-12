@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+    <title>输入跳转页面</title>
+</head>
+
+<body>
+    <h1>xlc-cloud</h1>
+    <input type="text" id="inputValue" placeholder="请输入内容">
+    <button onclick="redirect()">跳转</button>
+
+    <script>
+        function redirect() {
+            const inputText = document.getElementById('inputValue').value;
+            if (inputText) {
+                const baseUrl = 'https://xlc-cloud.github.io/';
+                const newUrl = baseUrl + inputText;
+                window.location.href = newUrl;
+            }
+        }
+    </script>
+</body>
+
+</html>
+    
